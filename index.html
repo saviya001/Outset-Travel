@@ -13,6 +13,9 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <link rel="icon" href="OUTSET TRAVELES Logo.png" type="image/png" />
     <style>
+        /* Add Google Font - moved to the top for correctness */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
         :root {
             --primary: #00F2FE; /* Electric Cyan */
             --primary-light: #70FFFF;
@@ -32,7 +35,7 @@
         body {
             background-color: var(--darker);
             color: var(--light-text);
-            font-family: 'Poppins', sans-serif; /* Changed font */
+            font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
         }
 
@@ -47,9 +50,9 @@
         }
 
         @keyframes gradientTextAnimation {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         /* Header */
@@ -60,9 +63,9 @@
             border-bottom: 1px solid rgba(0, 242, 254, 0.3);
         }
         .header-default {
-             background-color: rgba(13, 17, 23, 0.7); /* Darker transparent */
-             backdrop-filter: blur(8px);
-             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+              background-color: rgba(13, 17, 23, 0.7); /* Darker transparent */
+              backdrop-filter: blur(8px);
+              border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
 
@@ -94,8 +97,8 @@
             transition: all 0.3s ease;
         }
         .service-card:hover .icon-bg {
-             box-shadow: 0 0 25px rgba(0, 242, 254, 0.7);
-             transform: rotate(15deg) scale(1.1);
+              box-shadow: 0 0 25px rgba(0, 242, 254, 0.7);
+              transform: rotate(15deg) scale(1.1);
         }
 
 
@@ -142,7 +145,7 @@
             font-size: 0.9em;
             display: inline-block;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-         }
+       }
 
         /* Animated background */
         .animated-bg {
@@ -194,12 +197,12 @@
             color: var(--primary);
             transition: all 0.3s ease;
             font-weight: 600;
-         }
+       }
          .btn-secondary-glow:hover {
             background-color: rgba(0, 242, 254, 0.1);
             box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
             transform: scale(1.05) translateY(-2px);
-         }
+       }
 
 
         /* Custom scrollbar */
@@ -216,7 +219,7 @@
             border-radius: 10px;
         }
          ::-webkit-scrollbar-thumb:hover {
-             background: linear-gradient(180deg, var(--primary-light), #ff4dbf);
+               background: linear-gradient(180deg, var(--primary-light), #ff4dbf);
          }
 
         /* Form inputs */
@@ -228,7 +231,7 @@
             border-radius: 0.5rem; /* Rounded inputs */
         }
          .form-input::placeholder {
-             color: var(--medium-text);
+               color: var(--medium-text);
          }
 
         .form-input:focus {
@@ -238,12 +241,12 @@
             outline: none; /* Remove default outline */
         }
          select.form-input { /* Style select arrow */
-             appearance: none;
-             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%2300F2FE' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
-             background-position: right 0.5rem center;
-             background-repeat: no-repeat;
-             background-size: 1.5em 1.5em;
-             padding-right: 2.5rem;
+               appearance: none;
+               background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%2300F2FE' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+               background-position: right 0.5rem center;
+               background-repeat: no-repeat;
+               background-size: 1.5em 1.5em;
+               padding-right: 2.5rem;
          }
 
 
@@ -261,9 +264,6 @@
             color: var(--darker);
             box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
         }
-
-         /* Add Google Font */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
     </style>
 </head>
@@ -314,7 +314,7 @@
         <div class="flex flex-col space-y-2 p-6">
             <a href="#home" class="hover:text-cyan-400 transition duration-300 py-3 border-b border-gray-700 text-lg" @click="document.getElementById('mobileMenu').classList.add('hidden')">Home</a>
             <a href="#services" class="hover:text-cyan-400 transition duration-300 py-3 border-b border-gray-700 text-lg" @click="document.getElementById('mobileMenu').classList.add('hidden')">Services</a>
-            <a href="#Destination" class="hover:text-cyan-400 transition duration-300 py-3 border-b border-gray-700 text-lg" @click="document.getElementById('mobileMenu').classList.add('hidden')">Destination</a>
+            <a href="#destinations" class="hover:text-cyan-400 transition duration-300 py-3 border-b border-gray-700 text-lg" @click="document.getElementById('mobileMenu').classList.add('hidden')">Destination</a>
             <a href="#booking" class="hover:text-cyan-400 transition duration-300 py-3 border-b border-gray-700 text-lg" @click="document.getElementById('mobileMenu').classList.add('hidden')">Booking</a>
             <a href="#contact" class="hover:text-cyan-400 transition duration-300 py-3 text-lg" @click="document.getElementById('mobileMenu').classList.add('hidden')">Contact</a>
         </div>
@@ -332,13 +332,13 @@
                     Discover the World  <span class="gradient-text">Within You</span>
                 </h2>
                 <p class="text-lg md:text-xl text-gray-300 mb-10 animate__animated animate__fadeInUp animate__delay-1s">
-                   Experience breathtaking journeys crafted with passion. Unforgettable luxury, seamless service, worldwide destinations.
+                    Experience breathtaking journeys crafted with passion. Unforgettable luxury, seamless service, worldwide destinations.
                 </p>
                 <div class="flex flex-wrap gap-4 justify-center md:justify-start animate__animated animate__fadeInUp animate__delay-2s">
                     <a href="#booking" class="btn-glow text-black font-semibold px-8 py-3 rounded-lg transition duration-300 transform hover:scale-105 active:scale-95">
                         Start Your Adventure
                     </a>
-                    <a href="#Places" class="btn-secondary-glow font-semibold px-8 py-3 rounded-lg transition duration-300 transform hover:scale-105 active:scale-95">
+                    <a href="#destinations" class="btn-secondary-glow font-semibold px-8 py-3 rounded-lg transition duration-300 transform hover:scale-105 active:scale-95">
                         Explore Places
                     </a>
                 </div>
@@ -408,11 +408,10 @@
                     </div>
                     <h4 class="text-2xl font-semibold mb-3 text-cyan-400">Travel Insurance</h4>
                     <p class="text-gray-300">
-                       Luxury airport pickups, private chauffeurs, and unique transport options for ultimate comfort.
+                        Luxury airport pickups, private chauffeurs, and unique transport options for ultimate comfort.
                     </p>
                 </div>
 
-                
             </div>
         </div>
     </section>
@@ -471,9 +470,9 @@
                          <p class="text-gray-300 text-sm mb-3">Accommodation,Water Activities,Breakfast,Transporation,Tours</p>
                          <div class="mt-4">
                             <span class="destination-price">Booking Now</span>
-                        </div>
+                         </div>
                      </div>
-                 </div>
+                </div>
 
                  <div class="destination-card relative h-96 group" data-aos="zoom-in" data-aos-delay="200">
                      <img src="Dubai.png" alt="Dubai" class="w-full h-full object-cover">
@@ -483,7 +482,7 @@
                          <p class="text-gray-300 text-sm mb-3">Transport,Meals,Stay,Sightseeing,Tour Guide</p>
                           <div class="mt-4">
                             <span class="destination-price">Booking Now</span>
-                         </div>
+                          </div>
                      </div>
                  </div>
 
@@ -495,7 +494,7 @@
                          <p class="text-gray-300 text-sm mb-3">Accommodation,Airport Pickup & Drop,Breakfast,Transpotation,Tour Guide,Tours & Sighings</p>
                          <div class="mt-4">
                             <span class="destination-price">Booking Now</span>
-                        </div>
+                         </div>
                      </div>
                  </div>
             </div>
@@ -517,7 +516,7 @@
                          <div class="relative z-10">
                             <h3 class="text-3xl font-bold mb-5 text-white leading-snug">Ready for an <span class="gradient-text">Unforgettable</span> Adventure?</h3>
                             <p class="text-gray-300 mb-8 text-lg">
-                                Let our experts curate your perfect journey. Tell us your dreams, we'll handle the details.
+                                 Let our experts curate your perfect journey. Tell us your dreams, we'll handle the details.
                             </p>
                             <div class="space-y-4">
                                 <div class="flex items-center" data-aos="fade-left" data-aos-delay="100">
@@ -533,15 +532,17 @@
                                     <span class="text-gray-200">Flexible Booking Options</span>
                                 </div>
                             </div>
-                        </div>
+                         </div>
                     </div>
 
                     <div class="md:w-1/2 p-8 md:p-10">
                         <h3 class="text-3xl font-bold mb-8 text-center md:text-left text-white">Start Your Custom Journey</h3>
-                        <form action="https://formsubmit.co/savinduwijesinghe95@gmail.com" method="POST" class="space-y-5">
+                        <form action="https://formsubmit.co/ffd084fe6ff3319ecd8c4a69681df639" method="POST" class="space-y-5">
                             <input type="hidden" name="_subject" value="New Luxury Travel Inquiry from Website!">
                             <input type="hidden" name="_template" value="table">
-                             <input type="hidden" name="_captcha" value="false"> <input type="hidden" name="_next" value="https://yourdomain.co/thankyou.html"> <div>
+                             <input type="hidden" name="_captcha" value="false">
+                             <input type="hidden" name="_next" value="https://saviya001.github.io/thankyou.html">
+                            <div>
                                 <label for="name" class="block text-gray-300 mb-2 font-medium">Full Name</label>
                                 <input type="text" id="name" name="name" required class="form-input w-full px-4 py-3" placeholder="Enter your full name">
                             </div>
@@ -609,7 +610,7 @@
             <div class="text-center mb-16" data-aos="fade-up">
                 <h3 class="text-4xl md:text-5xl font-bold mb-5">Get In <span class="gradient-text">Touch</span></h3>
                 <p class="max-w-2xl mx-auto text-gray-300 text-lg">
-                   Connect with our travel artisans for personalized assistance and expert advice.
+                    Connect with our travel artisans for personalized assistance and expert advice.
                 </p>
             </div>
 
@@ -653,7 +654,6 @@
                                     <div> <a href="tel:+94756375091" class="text-gray-300 hover:text-cyan-300 transition duration-300 hover:underline">
                                         075 6375 091  
                                     </a></div>
-                                   
                                     
                                 </div>
                             </div>
@@ -689,16 +689,19 @@
                 </div>
 
                  <div data-aos="fade-left" data-aos-delay="200">
-    <div class="bg-gray-800/50 border border-cyan-500/30 rounded-xl p-3 backdrop-blur-md shadow-lg h-full">
-        <div class="h-full w-full min-h-[400px] rounded-lg overflow-hidden">
-            <iframe 
-                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3954.7133422038555!2d80.08096499999999!3d7.606141000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMzYnMjIuMSJOIDgwwrAwNCc1MS41IkU!5e0!3m2!1sen!2slk!4v1746942063193!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              
-            </iframe>
-        </div>
-    </div>
-</div>
-
+                    <div class="bg-gray-800/50 border border-cyan-500/30 rounded-xl p-3 backdrop-blur-md shadow-lg h-full">
+                        <div class="h-full w-full min-h-[400px] rounded-lg overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63300.73033527602!2d80.20757754326521!3d7.570950911765011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae33a0a33c1664d%3A0x865037d748f203a9!2sWariyapola!5e0!3m2!1sen!2slk!4v1668589886405!5m2!1sen!2slk"
+                                width="100%"
+                                height="100%"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -723,7 +726,7 @@
                     <ul class="space-y-2">
                         <li><a href="#home" class="text-gray-400 hover:text-cyan-300 transition duration-300 hover:underline">Home</a></li>
                         <li><a href="#services" class="text-gray-400 hover:text-cyan-300 transition duration-300 hover:underline">Services</a></li>
-                        <li><a href="#destination" class="text-gray-400 hover:text-cyan-300 transition duration-300 hover:underline">Location</a></li>
+                        <li><a href="#destinations" class="text-gray-400 hover:text-cyan-300 transition duration-300 hover:underline">Location</a></li>
                          <li><a href="#booking" class="text-gray-400 hover:text-cyan-300 transition duration-300 hover:underline">Booking</a></li>
                         <li><a href="#contact" class="text-gray-400 hover:text-cyan-300 transition duration-300 hover:underline">Contact</a></li>
                     </ul>
@@ -826,9 +829,9 @@
          const mobileMenu = document.getElementById('mobileMenu');
 
          if (mobileMenuButton && mobileMenu) {
-             mobileMenuButton.addEventListener('click', () => {
-                 mobileMenu.classList.toggle('hidden');
-             });
+               mobileMenuButton.addEventListener('click', () => {
+                   mobileMenu.classList.toggle('hidden');
+               });
          }
 
 
@@ -836,17 +839,9 @@
          const today = new Date().toISOString().split('T')[0];
          const departureInput = document.getElementById('departure');
          if(departureInput) {
-            departureInput.setAttribute('min', today);
+             departureInput.setAttribute('min', today);
          }
 
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
