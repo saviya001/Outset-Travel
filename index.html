@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Outsets Traveles - Electrifying luxury travel experiences with seamless visa assistance, air tickets, and personalized services">
+    <meta name="description" content="Outset Traveles - Electrifying luxury travel experiences with seamless visa assistance, air tickets, and personalized services">
     <meta name="keywords" content="travel, luxury travel, visa assistance, air tickets, hotel booking, vibrant travel, colorful travel">
     <title>OUTSET TRAVELES - Vibrant Luxury Travel</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -13,15 +13,15 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <style>
         :root {
-            --primary: #00F2FE; 
+            --primary: #00F2FE; /* El
             --primary-light: #70FFFF;
             --primary-dark: #00BCCD;
-            --secondary: #F900B8;
-            --accent: #FFE600; 
-            --dark: #1a202c;
-            --darker: #0D1117; 
-            --light-text: #e2e8f0;
-            --medium-text: #94a3b8; 
+            --secondary: #F900B8; /* Vibrant Magenta */
+            --accent: #FFE600; /* Bright Yellow */
+            --dark: #1a202c; /* Slightly Lighter Dark */
+            --darker: #0D1117; /* Near Black */
+            --light-text: #e2e8f0; /* Light Gray Text */
+            --medium-text: #94a3b8; /* Medium Gray Text */
         }
 
         html {
@@ -31,11 +31,11 @@
         body {
             background-color: var(--darker);
             color: var(--light-text);
-            font-family: 'Poppins', sans-serif; 
+            font-family: 'Poppins', sans-serif; /* Changed font */
             overflow-x: hidden;
         }
 
-      
+        /* Gradient text */
         .gradient-text {
             background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
             -webkit-background-clip: text;
@@ -51,7 +51,7 @@
           100% { background-position: 0% 50%; }
         }
 
-    
+        /* Header */
         .header-scrolled {
             background: linear-gradient(90deg, rgba(13, 17, 23, 0.8), rgba(0, 242, 254, 0.1), rgba(249, 0, 184, 0.1));
             backdrop-filter: blur(15px);
@@ -59,24 +59,24 @@
             border-bottom: 1px solid rgba(0, 242, 254, 0.3);
         }
         .header-default {
-             background-color: rgba(13, 17, 23, 0.7); 
+             background-color: rgba(13, 17, 23, 0.7); /* Darker transparent */
              backdrop-filter: blur(8px);
              border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
 
-        
+        /* Hero section */
         .hero-overlay {
             background: linear-gradient(135deg, rgba(13, 17, 23, 0.95) 0%, rgba(0, 242, 254, 0.4) 50%, rgba(249, 0, 184, 0.4) 100%);
         }
 
-      
+        /* Service cards */
         .service-card {
             transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-            background: rgba(26, 32, 44, 0.7); 
+            background: rgba(26, 32, 44, 0.7); /* Darker card bg */
             backdrop-filter: blur(12px);
             border: 1px solid rgba(0, 242, 254, 0.2);
-            border-radius: 1rem;
+            border-radius: 1rem; /* More rounded */
         }
 
         .service-card:hover {
@@ -98,7 +98,7 @@
         }
 
 
-        
+        /* Destination cards */
         .destination-card {
             transition: all 0.5s ease;
             position: relative;
@@ -143,7 +143,7 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
          }
 
-        
+        /* Animated background */
         .animated-bg {
             background: linear-gradient(-45deg, var(--darker), #1a202c, #2b004d, #005068); /* Darker vibrant gradient */
             background-size: 400% 400%;
@@ -156,7 +156,7 @@
             100% { background-position: 0% 50%; }
         }
 
-     
+        /* Floating animation */
         @keyframes float {
             0% { transform: translateY(0px) rotate(0deg); opacity: 0.1; }
             50% { transform: translateY(-25px) rotate(15deg); opacity: 0.3; }
@@ -165,13 +165,13 @@
 
         .floating {
             animation: float 8s ease-in-out infinite;
-            z-index: 0;
-            position: fixed; 
+            z-index: 0; /* Ensure they stay behind content */
+            position: fixed; /* Changed from absolute to fixed */
             border-radius: 50%;
             filter: blur(5px);
         }
 
-       
+        /* Button glow */
         .btn-glow {
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             color: var(--darker);
@@ -187,7 +187,7 @@
             transform: scale(1.05) translateY(-2px);
         }
 
-       
+        /* Secondary Button */
          .btn-secondary-glow {
             border: 2px solid var(--primary);
             color: var(--primary);
@@ -201,7 +201,7 @@
          }
 
 
-       
+        /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -221,10 +221,10 @@
         /* Form inputs */
         .form-input {
             transition: all 0.3s ease;
-            background: rgba(26, 32, 44, 0.8); 
+            background: rgba(26, 32, 44, 0.8); /* Slightly darker input */
             border: 1px solid rgba(0, 242, 254, 0.3);
             color: var(--light-text);
-            border-radius: 0.5rem; 
+            border-radius: 0.5rem; /* Rounded inputs */
         }
          .form-input::placeholder {
              color: var(--medium-text);
@@ -234,9 +234,9 @@
             border-color: var(--primary);
             box-shadow: 0 0 0 3px rgba(0, 242, 254, 0.3);
             background-color: rgba(26, 32, 44, 1);
-            outline: none;
+            outline: none; /* Remove default outline */
         }
-         select.form-input { 
+         select.form-input { /* Style select arrow */
              appearance: none;
              background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%2300F2FE' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
              background-position: right 0.5rem center;
@@ -246,7 +246,7 @@
          }
 
 
-        
+       
         .social-icon {
             transition: all 0.3s ease;
             background: rgba(26, 32, 44, 0.7);
@@ -261,7 +261,7 @@
             box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
         }
 
-       
+         
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
     </style>
@@ -630,8 +630,8 @@
                                 </div>
                                 <div>
                                     <h5 class="font-semibold mb-1 text-lg">Email Us</h5>
-                                    <a href="mailto:savinduwijesinghe95@gmail.com" class="text-gray-300 hover:text-cyan-300 transition duration-300 hover:underline">
-                                        savinduwijesinghe95@gmail.com
+                                    <a href="mailto:outsettravels@gmail.com" class="text-gray-300 hover:text-cyan-300 transition duration-300 hover:underline">
+                                        outsettravels@gmail.com
                                     </a>
                                 </div>
                             </div>
@@ -705,7 +705,7 @@
                 <div data-aos="fade-up" data-aos-delay="100">
                      <div class="flex items-center space-x-3 mb-4">
                          <img src="OUTSET TRAVELES Logo.png" alt="OUTSET TRAVELES Logo" class="h-8 w-auto"> <h4 class="text-xl font-bold tracking-wider gradient-text">
-                            OUTSET TRAVELES
+                            OUTSET TRAVELS
                         </h4>
                     </div>
                     <p class="text-gray-400 text-sm">
@@ -761,7 +761,7 @@
 
             <div class="pt-8 border-t border-gray-700/50 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
                 <p class="text-gray-500 text-sm mb-4 md:mb-0">
-                    © <span id="currentYear"></span> OUTSET TRAVELES. All Rights Reserved. Crafted  by<a href="https://www.linkedin.com/in/savindu-wijesinghe/> Savindu Wijesinghe </a>>Creation.
+                    © <span id="currentYear"></span> OUTSET TRAVELES. All Rights Reserved. Crafted with by S Creation.
                 </p>
                  <div class="text-gray-500 text-sm space-x-4">
                      <a href="#" class="hover:text-cyan-400 transition">Privacy Policy</a>
@@ -792,10 +792,12 @@
         AOS.init({
             duration: 1000, 
             once: false, 
+        });
 
+        
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-       
+        
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const hrefAttribute = this.getAttribute('href');
@@ -805,7 +807,7 @@
                     document.querySelector(hrefAttribute).scrollIntoView({
                         behavior: 'smooth'
                     });
-               
+                    
                      const mobileMenu = document.getElementById('mobileMenu');
                      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                          mobileMenu.classList.add('hidden');
@@ -814,7 +816,7 @@
             });
         });
 
-
+         
          const mobileMenuButton = document.querySelector('.md\\:hidden.text-2xl');
          const mobileMenu = document.getElementById('mobileMenu');
 
@@ -825,7 +827,7 @@
          }
 
 
-      
+         
          const today = new Date().toISOString().split('T')[0];
          const departureInput = document.getElementById('departure');
          if(departureInput) {
@@ -834,9 +836,4 @@
 
     </script>
 </body>
-
 </html>
-
-
-
-
