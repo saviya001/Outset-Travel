@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Outset Traveles - Electrifying luxury travel experiences with seamless visa assistance, air tickets, and personalized services">
+    <meta name="description" content="Outser Traveles - Electrifying luxury travel experiences with seamless visa assistance, air tickets, and personalized services">
     <meta name="keywords" content="travel, luxury travel, visa assistance, air tickets, hotel booking, vibrant travel, colorful travel">
     <title>OUTSET TRAVELES - Vibrant Luxury Travel</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <style>
         :root {
-            --primary: #00F2FE; /* El
+            --primary: #00F2FE; /* Electric Cyan */
             --primary-light: #70FFFF;
             --primary-dark: #00BCCD;
             --secondary: #F900B8; /* Vibrant Magenta */
@@ -246,7 +246,7 @@
          }
 
 
-       
+        /* Social icons */
         .social-icon {
             transition: all 0.3s ease;
             background: rgba(26, 32, 44, 0.7);
@@ -261,7 +261,7 @@
             box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
         }
 
-         
+         /* Add Google Font */
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
     </style>
@@ -630,8 +630,8 @@
                                 </div>
                                 <div>
                                     <h5 class="font-semibold mb-1 text-lg">Email Us</h5>
-                                    <a href="mailto:savinduwijesinghe95@gmail.com" class="text-gray-300 hover:text-cyan-300 transition duration-300 hover:underline">
-                                        savinduwijesinghe95@gmail.com
+                                    <a href="mailto:outsettravels@gmail.com" class="text-gray-300 hover:text-cyan-300 transition duration-300 hover:underline">
+                                        outsettravels@gmail.com
                                     </a>
                                 </div>
                             </div>
@@ -705,7 +705,7 @@
                 <div data-aos="fade-up" data-aos-delay="100">
                      <div class="flex items-center space-x-3 mb-4">
                          <img src="OUTSET TRAVELES Logo.png" alt="OUTSET TRAVELES Logo" class="h-8 w-auto"> <h4 class="text-xl font-bold tracking-wider gradient-text">
-                            OUTSET TRAVELS
+                            OUTSET TRAVELES
                         </h4>
                     </div>
                     <p class="text-gray-400 text-sm">
@@ -761,7 +761,7 @@
 
             <div class="pt-8 border-t border-gray-700/50 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
                 <p class="text-gray-500 text-sm mb-4 md:mb-0">
-                    © <span id="currentYear"></span> OUTSET TRAVELES. All Rights Reserved. Crafted  by <a href="https://www.linkedin.com/in/savindu-wijesinghe/"class="hover:text-cyan-400 transition"> Savindu Wijesinghe </a> Creation.
+                    © <span id="currentYear"></span> OUTSET TRAVELES. All Rights Reserved. Crafted with by S Creation.
                 </p>
                  <div class="text-gray-500 text-sm space-x-4">
                      <a href="#" class="hover:text-cyan-400 transition">Privacy Policy</a>
@@ -790,24 +790,24 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1000, 
-            once: false, 
+            duration: 1000, // values from 0 to 3000, with step 50ms
+            once: false, // whether animation should happen only once - while scrolling down
         });
 
-        
+        // Set current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        
+        // Optional: Add smooth scroll for navigation links (if not handled by html scroll-behavior)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const hrefAttribute = this.getAttribute('href');
-                
+                // Check if it's a valid internal link and not just '#'
                 if (hrefAttribute && hrefAttribute.length > 1 && document.querySelector(hrefAttribute)) {
                      e.preventDefault();
                     document.querySelector(hrefAttribute).scrollIntoView({
                         behavior: 'smooth'
                     });
-                    
+                    // Close mobile menu if open
                      const mobileMenu = document.getElementById('mobileMenu');
                      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                          mobileMenu.classList.add('hidden');
@@ -816,7 +816,7 @@
             });
         });
 
-         
+         // Mobile menu toggle logic (if not using AlpineJS for everything)
          const mobileMenuButton = document.querySelector('.md\\:hidden.text-2xl');
          const mobileMenu = document.getElementById('mobileMenu');
 
@@ -827,7 +827,7 @@
          }
 
 
-         
+         // Update minimum date for date input dynamically
          const today = new Date().toISOString().split('T')[0];
          const departureInput = document.getElementById('departure');
          if(departureInput) {
@@ -837,4 +837,3 @@
     </script>
 </body>
 </html>
-
