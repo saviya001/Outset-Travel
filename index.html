@@ -278,7 +278,7 @@
         <div class="container mx-auto px-4 flex justify-between items-center py-3">
             <div class="flex items-center space-x-3" data-aos="fade-right">
                 <img src="OUTSET TRAVELES Logo.png" alt="OUTSET TRAVELES Logo" class="h-10 w-auto"> <h1 class="text-2xl font-bold tracking-wider gradient-text">
-                    OUTSET TRAVELES
+                    OUTSET TRAVELS
                 </h1>
             </div>
             <nav class="hidden md:flex space-x-8" data-aos="fade-left">
@@ -291,7 +291,11 @@
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 transition-all duration-400 group-hover:w-full"></span>
                 </a>
                 <a href="#destinations" class="hover:text-cyan-400 transition duration-300 font-medium relative group pb-1">
-                    Destinations
+                    Location
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 transition-all duration-400 group-hover:w-full"></span>
+                </a>
+                 <a href="#booking" class="hover:text-cyan-400 transition duration-300 font-medium relative group pb-1">
+                    Booking
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-pink-500 transition-all duration-400 group-hover:w-full"></span>
                 </a>
                 <a href="#contact" class="hover:text-cyan-400 transition duration-300 font-medium relative group pb-1">
@@ -718,7 +722,7 @@
                     <ul class="space-y-2">
                         <li><a href="#home" class="text-gray-400 hover:text-cyan-300 transition duration-300 hover:underline">Home</a></li>
                         <li><a href="#services" class="text-gray-400 hover:text-cyan-300 transition duration-300 hover:underline">Services</a></li>
-                        <li><a href="#destination" class="text-gray-400 hover:text-cyan-300 transition duration-300 hover:underline">Destination</a></li>
+                        <li><a href="#destination" class="text-gray-400 hover:text-cyan-300 transition duration-300 hover:underline">Location</a></li>
                          <li><a href="#booking" class="text-gray-400 hover:text-cyan-300 transition duration-300 hover:underline">Booking</a></li>
                         <li><a href="#contact" class="text-gray-400 hover:text-cyan-300 transition duration-300 hover:underline">Contact</a></li>
                     </ul>
@@ -794,10 +798,10 @@
             once: false, // whether animation should happen only once - while scrolling down
         });
 
-        // Set current year in footer
+        //  footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Optional: Add smooth scroll for navigation links (if not handled by html scroll-behavior)
+        //  navigation links 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const hrefAttribute = this.getAttribute('href');
@@ -807,7 +811,7 @@
                     document.querySelector(hrefAttribute).scrollIntoView({
                         behavior: 'smooth'
                     });
-                    // Close mobile menu if open
+                    // Close  open
                      const mobileMenu = document.getElementById('mobileMenu');
                      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                          mobileMenu.classList.add('hidden');
@@ -816,7 +820,7 @@
             });
         });
 
-         // Mobile menu toggle logic (if not using AlpineJS for everything)
+         // Mobile menu 
          const mobileMenuButton = document.querySelector('.md\\:hidden.text-2xl');
          const mobileMenu = document.getElementById('mobileMenu');
 
@@ -827,7 +831,7 @@
          }
 
 
-         // Update minimum date for date input dynamically
+         
          const today = new Date().toISOString().split('T')[0];
          const departureInput = document.getElementById('departure');
          if(departureInput) {
@@ -837,6 +841,7 @@
     </script>
 </body>
 </html>
+
 
 
 
